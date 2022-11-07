@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="logo.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <title>Cek Data Kelayakan Kredit</title>
+    <style>
+      .input-color {
+        background-color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <!--<h1>Lagi Belajar Bootstrap!</h1>-->
+    <nav class="navbar sticky-top navbar-expand-sm bg-primary navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Cek</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="container mt-3">
+        <h2>Cek Data</h2>
+        <p>Silahkan masukkan data dibawah ini:</p>
+        <form action="/hasil" method="post">
+          <div class="form-floating mb-3 mt-3">
+            <input type="text" class="form-control input-color" id="kode_kontrak" placeholder="Masukkan Kode Kontrak Anda" name="kode_kontrak" required />
+            <label for="kode_kontrak">Kode Kontrak</label>
+          </div>
+          <div class="form-floating mb-3 mt-3">
+            <input type="number" class="form-control input-color" id="pendapatan_setahun_juta" placeholder="Masukkan Pendapatan Setahun Anda" name="pendapatan_setahun_juta" required />
+            <label for="pendapatan_setahun_juta">Pendapatan Setahun</label>
+          </div>
+          <div class="form-floating mb-3 mt-3">
+            <input type="number" class="form-control input-color" id="durasi_pinjaman_bulan" placeholder="Masukkan Durasi Pinjaman Anda" name="durasi_pinjaman_bulan" required />
+            <label for="durasi_pinjaman_bulan">Durasi Pinjaman</label>
+          </div>
+          <div class="form-floating mb-3 mt-3">
+            <input type="number" class="form-control input-color" id="jumlah_tanggungan" placeholder="Masukkan Jumlah Tanggungan Anda" name="jumlah_tanggungan" required />
+            <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
+          </div>
+          <div class="form-floating mb-3 mt-3">
+            <select class="form-select form-control input-color" aria-label="Default select example" id="kpr_aktif" name="kpr_aktif" required>
+              <option selected>Status KPR</option>
+              <option value="1">AKTIF</option>
+              <option value="0">TIDAK</option>
+            </select>
+            <label for="kpr_aktif">Status KPR</label>
+          </div>
+          <div class="form-floating mb-3 mt-3">
+            <select class="form-select form-control input-color" aria-label="Default select example" id="rata_rata_overdue" name="rata_rata_overdue" required>
+              <option selected>Rata-Rata Overdue</option>
+              <option value="1">0-30 Hari</option>
+              <option value="2">31-35 Hari</option>
+              <option value="3">46-60 Hari</option>
+              <option value="4">61-90 Hari</option>
+              <option value="4">Lebih dari 90 Hari</option>
+            </select>
+            <label for="rata_rata_overdue">Rata-Rata Overdue</label>
+          </div>
+          <button type="submit" class="btn btn-primary" name="submit">Cek</button>
+        </form>
+      </div>
+    </div>
+
+    <!--Bagian Bawah-->
+    <footer class="bg-primary text-center text-lg-start fixed-bottom">
+      <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright By
+        <a class="text-white" href="https://github.com/Luqman-Noor-Buat">Luqman Noor Buat</a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
